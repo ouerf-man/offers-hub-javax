@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.MarketController">
+   <children>
+      <BorderPane layoutX="102.0" layoutY="25.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <VBox prefHeight="200.0" prefWidth="250.0" styleClass="left-bar" stylesheets="@../values/style.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <Label contentDisplay="CENTER" prefHeight="37.0" prefWidth="87.0" text="OFFERS " textAlignment="CENTER" textFill="#808080">
+                           <font>
+                              <Font name="Calibri" size="25.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="38.0" prefWidth="57.0" text="HUB" textFill="GREY">
+                           <font>
+                              <Font name="Calibri Bold" size="25.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="46.0" prefWidth="230.0" stylesheets="@../values/style.css">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" />
+                     </VBox.margin>
+                     <children>
+                        <Label prefHeight="17.0" prefWidth="43.0" text="Filter" />
+                        <ComboBox prefWidth="150.0" styleClass="transparent" stylesheets="@../values/style.css">
+                        </ComboBox>
+                     </children>
+                     <styleClass>
+                        <String fx:value="filter-box" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </HBox>
+                  <Pane prefHeight="26.0" prefWidth="250.0" />
+                  <VBox fx:id="selectedProduct" alignment="CENTER" prefHeight="298.0" prefWidth="210.0" styleClass="item-left-card" stylesheets="@../values/style.css">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="139.0">
+                           <children>
+                              <Label fx:id="nameLabel" prefHeight="33.0" prefWidth="149.0" text="Lablebi" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="percentageLabel" prefHeight="33.0" prefWidth="33.0" text="-20" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                              <Label prefHeight="33.0" prefWidth="33.0" text="\%" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <ImageView fx:id="image" fitHeight="134.0" fitWidth="152.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../imgs/lablebi.png" />
+                           </image>
+                        </ImageView>
+                        <HBox alignment="CENTER" prefHeight="44.0" prefWidth="205.0">
+                           <children>
+                              <Label fx:id="place" prefHeight="0.0" prefWidth="149.0" text="Chez hattab" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <Button mnemonicParsing="false" prefHeight="7.0" prefWidth="171.0" styleClass="buy-button" stylesheets="@../values/style.css" text="Buy Now" />
+                     </children>
+                     <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </VBox>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="23.0" prefWidth="500.0">
+                     <children>
+                        <Label opacity="0.6" prefHeight="18.0" prefWidth="75.0" text="Language:">
+                           <font>
+                              <Font name="Calibri" size="15.0" />
+                           </font>
+                        </Label>
+                        <Label opacity="0.6" prefHeight="17.0" prefWidth="64.0" text="English" underline="true">
+                           <font>
+                              <Font name="Calibri" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="477.0" prefWidth="500.0">
+                     <children>
+                        <ScrollPane fx:id="scroll" prefHeight="477.0" prefWidth="515.0">
+                          <content>
+                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                                 <children>
+                                    <GridPane fx:id="grid" layoutY="14.0">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                      </columnConstraints>
+                                    </GridPane>
+                                 </children>
+                              </AnchorPane>
+                          </content>
+                        </ScrollPane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

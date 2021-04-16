@@ -1,0 +1,31 @@
+.filter-box{
+    -fx-background-color: #fff;
+    -fx-background-radius: 100;
+}
+
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+
+.left-bar{
+    -fx-background-color: #d3d3d3;
+}
+
+.shadow{
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.1), 10.0,0.0,0.0,10.0);
+}
+
+.item-left-card{
+    -fx-background-color: #F16C31;
+    -fx-background-radius: 30;
+}
+
+.buy-button{
+    -fx-background-color: #fff;
+    -fx-background-radius: 30;
+}
+
+.item{
+    -fx-background-color: #fff;
+    -fx-background-radius: 30;
+}
