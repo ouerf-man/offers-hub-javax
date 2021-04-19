@@ -4,6 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.image.ImageView;
@@ -20,6 +21,9 @@ import java.util.List;
 import java.util.ResourceBundle;
 
 public class MarketController implements Initializable {
+
+    @FXML
+    private ComboBox<String> comboBox;
 
     @FXML
     private VBox selectedProduct;
@@ -62,6 +66,17 @@ public class MarketController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        // ADDING CATEGORIES
+        comboBox.getItems().addAll(
+                "Electronique",
+                "Alimentation",
+                "Réstauration",
+                "Prêt à porter",
+                "Bricolage Jardinage",
+                "Meuble-decoration");
+        comboBox.getSelectionModel().select("Réstauration");
+
+
         offers.addAll(getData());
         int column =0;
         int row = 1;

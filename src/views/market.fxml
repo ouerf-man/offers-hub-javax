@@ -43,7 +43,7 @@
                      </VBox.margin>
                      <children>
                         <Label prefHeight="17.0" prefWidth="43.0" text="Filter" />
-                        <ComboBox prefWidth="150.0" styleClass="transparent" stylesheets="@../values/style.css">
+                        <ComboBox fx:id="comboBox" prefWidth="150.0" promptText="Selectionner une catégorie" styleClass="transparent" stylesheets="@../values/style.css">
                         </ComboBox>
                      </children>
                      <styleClass>
