@@ -87,7 +87,7 @@
                               </Label>
                            </children>
                         </HBox>
-                        <Button mnemonicParsing="false" prefHeight="7.0" prefWidth="171.0" styleClass="buy-button" stylesheets="@../values/style.css" text="Buy Now" />
+                        <Button mnemonicParsing="false" onMousePressed="#handleButtonAction" prefHeight="7.0" prefWidth="171.0" styleClass="buy-button" stylesheets="@../values/style.css" text="Buy Now" />
                      </children>
                      <VBox.margin>
                         <Insets left="20.0" right="20.0" />
@@ -118,9 +118,9 @@
                   </HBox>
                   <HBox alignment="CENTER" prefHeight="477.0" prefWidth="500.0">
                      <children>
-                        <ScrollPane fx:id="scroll" prefHeight="477.0" prefWidth="515.0">
+                        <ScrollPane fx:id="scroll" prefHeight="477.0" prefWidth="504.0">
                           <content>
-                            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="200.0">
+                            <AnchorPane minHeight="0.0" minWidth="0.0">
                                  <children>
                                     <GridPane fx:id="grid" layoutY="14.0">
                                       <columnConstraints>
